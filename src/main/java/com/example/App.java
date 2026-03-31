@@ -22,16 +22,17 @@ public class App {
     }
 
     static class MyHandler implements HttpHandler {
-        @Override
-        public void handle(HttpExchange exchange) throws IOException {
+    @Override
+    public void handle(HttpExchange exchange) throws IOException {
 
-            // 🔥 UPDATED MESSAGE (Webhook test)
-            String response = "Webhook Test Successful - Version 1 🚀";
+        String response = "Webhook Test Successful - Version 1 ";
+        byte[] bytes = response.getBytes();
 
-            exchange.sendResponseHeaders(200, response.length());
-            OutputStream os = exchange.getResponseBody();
-            os.write(response.getBytes());
-            os.close();
-        }
+        exchange.sendResponseHeaders(200, bytes.length);
+
+        OutputStream os = exchange.getResponseBody();
+        os.write(bytes);
+        os.close();
     }
+}
 }
