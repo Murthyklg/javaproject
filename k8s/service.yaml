@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: javaproject-service
 spec:
-  type: LodeBalancer
+  type: LoadBalancer
   selector:
     app: javaproject
   ports:
