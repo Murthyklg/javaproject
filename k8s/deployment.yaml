@@ -19,4 +19,4 @@ spec:
           image: murthy4797/javaproject:latest   
           imagePullPolicy: Always       
           ports:
-            - containerPort: 8086
+            - containerPort: 8080
