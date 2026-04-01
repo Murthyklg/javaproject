@@ -25,7 +25,7 @@ public class App {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
 
-        String response = "Webhook Test Successful - Version 1 ";
+        String response = "Webhook Test Successful ";
         byte[] bytes = response.getBytes();
 
         exchange.sendResponseHeaders(200, bytes.length);
