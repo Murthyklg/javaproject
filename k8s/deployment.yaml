@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javaproject
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: javaproject
+  template:
+    metadata:
+      labels:
+        app: javaproject
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-credentials
+      containers:
+        - name: javaproject               
+          image: murthy4797/javaproject:latest   
+          imagePullPolicy: Always       
+          ports:
+            - containerPort: 8086
