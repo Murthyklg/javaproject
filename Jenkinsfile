@@ -5,7 +5,7 @@ pipeline {
         REGISTRY_CREDENTIALS = "docker-credentials"
     }
     
-
+ 
     stages {
         stage('checkout') {
             steps {
